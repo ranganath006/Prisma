@@ -303,6 +303,7 @@ export class UserControllerBase {
       select: {
         createdAt: true,
         description: true,
+        dueDate: true,
         id: true,
         name: true,
         startDate: true,
@@ -488,6 +489,12 @@ export class UserControllerBase {
         createdAt: true,
         estimation: true,
         id: true,
+
+        location: {
+          select: {
+            id: true,
+          },
+        },
 
         project: {
           select: {
